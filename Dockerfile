@@ -1,5 +1,5 @@
 FROM heroku/heroku:20
-LABEL maintainer="https://github.com/ShadowsocksR-Live/"
+LABEL maintainer="github.com/kleemm/ssrm/blob/main"
 
 RUN apt install curl unzip -y \
  && mkdir -m 777 /ssrbin \
