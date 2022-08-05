@@ -1,5 +1,5 @@
 FROM heroku/heroku:20
-LABEL maintainer="github.com/kleemm/ssrm/blob/main"
+LABEL maintainer="https://github.com/kleemm-Live/"
 
 RUN apt install curl unzip -y \
  && mkdir -m 777 /ssrbin \
