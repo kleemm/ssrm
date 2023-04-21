@@ -19,11 +19,11 @@
                         "dest": 3001
                     },
                     {
-                        "path": "/5816dce0-6b3d-4e35-be47-41b2d7b0aece-trojan",
+                        "path": "/trojan",
                         "dest": 3002
                     },
                     {
-                        "path": "/5816dce0-6b3d-4e35-be47-41b2d7b0aece-vmess",
+                        "path": "/vmess",
                         "dest": 3003
                     }
                 ]
@@ -39,7 +39,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "5816dce0-6b3d-4e35-be47-41b2d7b0aece"
+                        "id": "1eb6e917-774b-4a84-aff6-b058577c60a5"
                     }
                 ],
                 "decryption": "none"
@@ -56,7 +56,7 @@
             "settings": {
                 "clients": [
                     {
-                        "password": "5816dce0-6b3d-4e35-be47-41b2d7b0aece"
+                        "password": "1eb6e917-774b-4a84-aff6-b058577c60a5"
                     }
                 ]
             },
@@ -64,7 +64,7 @@
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "path": "/5816dce0-6b3d-4e35-be47-41b2d7b0aece-trojan"
+                    "path": "/trojan"
                 }
             }
         },
@@ -75,7 +75,7 @@
             "settings": {
                 "clients": [
                     {
-                        "id": "5816dce0-6b3d-4e35-be47-41b2d7b0aece"
+                        "id": "1eb6e917-774b-4a84-aff6-b058577c60a5"
                     }
                 ]
             },
@@ -83,7 +83,7 @@
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                    "path": "/5816dce0-6b3d-4e35-be47-41b2d7b0aece-vmess"
+                    "path": "/vmess"
                 }
             }
         }
