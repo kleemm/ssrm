@@ -1,16 +1,15 @@
-FROM heroku/heroku:20
-LABEL maintainer="https://github.com/kleemm-Live/"
+FROM node:latest
+EXPOSE 3000
+WORKDIR /app
 
-RUN apt install curl unzip -y \
- && mkdir -m 777 /ssrbin \
- && chgrp -R 0 /ssrbin \
- && chmod -R g+rwX /ssrbin \
- && curl -L -H "Cache-Control: no-cache" -o ssr.zip https://github.com/ShadowsocksR-Live/shadowsocksr-native/releases/latest/download/ssr-native-linux-x64.zip \
- && unzip ssr.zip -d /ssrbin ssr-server \
- && chmod +x /ssrbin/ssr-server \
- && rm -rf ssr.zip
+COPY entrypoint.sh /app/
+COPY package.json /app/
+COPY server.js /app/
 
-ADD entrypoint.sh /ssrbin/entrypoint.sh
-RUN chmod +x /ssrbin/entrypoint.sh 
 
-CMD /ssrbin/entrypoint.sh
+RUN apt-get update &&\
+    apt-get install -y iproute2 &&\
+    npm install -r package.json &&\
+    npm install -g pm2
+
+ENTRYPOINT [ "node", "server.js" ]
